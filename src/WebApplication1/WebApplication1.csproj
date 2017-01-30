@@ -6,7 +6,6 @@
     <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>

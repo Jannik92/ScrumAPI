@@ -29,6 +29,10 @@ namespace WebApplication1.Migrations
 
                     b.Property<string>("Title");
 
+                    b.Property<int>("estimatedEffort");
+
+                    b.Property<int>("realEffort");
+
                     b.HasKey("ItemId");
 
                     b.HasIndex("OwnerId");

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WebApplication1.Migrations
 {
-    public partial class JW1 : Migration
+    public partial class JW2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -95,7 +95,9 @@ namespace WebApplication1.Migrations
                     Description = table.Column<string>(nullable: true),
                     OwnerId = table.Column<int>(nullable: false),
                     SprintId = table.Column<int>(nullable: false),
-                    Title = table.Column<string>(nullable: true)
+                    Title = table.Column<string>(nullable: true),
+                    estimatedEffort = table.Column<int>(nullable: false),
+                    realEffort = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

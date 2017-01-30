@@ -8,8 +8,8 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(DataModell))]
-    [Migration("20170130195945_JW1")]
-    partial class JW1
+    [Migration("20170130203044_JW2")]
+    partial class JW2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,6 +29,10 @@ namespace WebApplication1.Migrations
                     b.Property<int>("SprintId");
 
                     b.Property<string>("Title");
+
+                    b.Property<int>("estimatedEffort");
+
+                    b.Property<int>("realEffort");
 
                     b.HasKey("ItemId");
 

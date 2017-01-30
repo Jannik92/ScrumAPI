@@ -10,6 +10,8 @@ namespace WebApplication1.Models
         public int ItemId { get; set; }
         public String Title { get; set; }
         public String Description { get; set; }
+        public int estimatedEffort { get; set; }
+        public int realEffort { get; set; } 
 
         //Owner
         public int OwnerId { get; set; }

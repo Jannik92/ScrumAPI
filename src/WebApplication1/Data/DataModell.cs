@@ -34,6 +34,7 @@ namespace WebApplication1.Data
             builder.Entity<MemberTeam>().HasOne(pt => pt.Team).WithMany(p => p.MemberTeams).HasForeignKey(pt => pt.TeamId);
             builder.Entity<MemberTeam>().HasOne(pt => pt.Member).WithMany(t => t.MemberTeams).HasForeignKey(pt => pt.MemberId);
             builder.Entity<Item>().HasOne(c => c.Sprint).WithMany(u => u.Items).OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Member>().HasIndex(b => b.Name).IsUnique();
         }
     }
 }

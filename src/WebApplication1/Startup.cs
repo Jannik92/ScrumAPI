@@ -28,10 +28,12 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddRouting();
             //Add DBContext
             services.AddDbContext<DataModell>();
             // Add framework services.
             services.AddMvc();
+                        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +41,7 @@ namespace WebApplication1
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            
             app.UseMvc();
         }
     }
